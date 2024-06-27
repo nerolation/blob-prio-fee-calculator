@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Type-2 to Type-3 Fee Converter</title>
+</head>
+<body>
+    <h1>Transaction Fee Calculator</h1>
+    <p>Convert EIP-1559-style transactions into Blob transactions with an abstracted blob priority fee.</p>
+    <p>Specify the desired blob prio fee and receive the maxFee and maxPrio values for your tx to incorporate the inputed blob prio fee.</p>
+    <form id="feeForm">
+        <label for="base_fee">Base Fee (Gwei):</label>
+        <input type="number" id="base_fee" name="base_fee" step="0.01"><br><br>
+        
+        <label for="max_fee">Max Fee (Gwei):</label>
+        <input type="number" id="max_fee" name="max_fee" step="0.01"><br><br>
+        
+        <label for="max_prio_fee">Max Priority Fee (Gwei):</label>
+        <input type="number" id="max_prio_fee" name="max_prio_fee" step="0.01"><br><br>
+        
+        <label for="blob_base_fee">Blob Base Fee (Gwei):</label>
+        <input type="number" id="blob_base_fee" name="blob_base_fee" step="0.01"><br><br>
+        
+        <label for="max_blob_prio">Max Blob Priority Fee (Gwei):</label>
+        <input type="number" id="max_blob_prio" name="max_blob_prio" step="0.01"><br><br>
+        
+        <label for="execution_gas_used">Execution Gas Used:</label>
+        <input type="number" id="execution_gas_used" name="execution_gas_used"><br><br>
+        
+        <label for="blobs_count">Blobs Count:</label>
+        <input type="number" id="blobs_count" name="blobs_count"><br><br>
+        
+        <button type="button" onclick="calculateFees()">Calculate</button>
+    </form>
+    
+    <h2>Results</h2>
+    <p id="result"></p>
+    
+    <script src="script.js"></script>
+</body>
+</html>
