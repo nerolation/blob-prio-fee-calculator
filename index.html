@@ -5,22 +5,25 @@
 </head>
 <body>
     <h1>Blob Prio Fee Calculator</h1>
+    <p>This tools allows you to answer the question...</br>If I would want to give a blob prio fee to compensate builders for including my blob, what would I set as maxFeePerGas and maxPrioFeePerGas to achieve my goal?</p>
+    
+    
     <p>Convert Blob transactions into EIP-1559-style transactions with an abstracted blob priority fee.</p>
     <p>Specify the desired blob prio fee and receive the maxFee and maxPrio values for your tx to incorporate the inputed blob prio fee.</p>
     <form id="feeForm">
         <label for="base_fee">Base Fee (Gwei):</label>
         <input type="number" id="base_fee" name="base_fee" step="0.01"><br><br>
         
-        <label for="max_fee">Max Fee (Gwei):</label>
+        <label for="max_fee">Max Fee Per Gas (Gwei):</label>
         <input type="number" id="max_fee" name="max_fee" step="0.01"><br><br>
         
-        <label for="max_prio_fee">Max Priority Fee (Gwei):</label>
+        <label for="max_prio_fee">Max Priority Fee Per Gas (Gwei):</label>
         <input type="number" id="max_prio_fee" name="max_prio_fee" step="0.01"><br><br>
         
-        <label for="blob_base_fee">Blob Base Fee (Gwei):</label>
+        <label for="blob_base_fee">Blob Base Fee Per Blob Gas (Gwei):</label>
         <input type="number" id="blob_base_fee" name="blob_base_fee" step="0.01"><br><br>
         
-        <label for="max_blob_prio">Max Blob Priority Fee (Gwei):</label>
+        <label for="max_blob_prio">Max Blob Priority Fee Per Blob Gas (Gwei):</label>
         <input type="number" id="max_blob_prio" name="max_blob_prio" step="0.01"><br><br>
         
         <label for="execution_gas_used">Execution Gas Used:</label>
